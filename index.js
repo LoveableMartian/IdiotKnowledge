@@ -1,6 +1,17 @@
-const { MongoClient } = require("mongodb");
-const { Express } = require("express")
 
+const express = import('express');
+
+// set up express app
+const app = express();
+
+app.get('/', function(){
+    console.log('GET request');
+});
+
+// listen for requests
+app.listen(4000,function(){
+    console.log('listening for requests');
+});
 
 async function main() {
 	// we'll add code here soon
