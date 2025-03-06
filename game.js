@@ -1,6 +1,8 @@
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const questionCounterText = document.getElementById('questionCounter');
 const scoreText = document.getElementById('score');
+const mongosh = require('mongosh');
+
 
 
 let currentQuestion = {};
@@ -13,9 +15,8 @@ let availableQuestions = [];
 let questions = [];
 
 //Questions are fetched from a json file where it's written out as a ready array.
-fetch("questions.json")
-.then(res => {
-    return res.json();
+db.getCollection("gamequestions").then(function(data){
+    return data.json();
 })
 .then(loadedQuestions => {
     questions = loadedQuestions;
