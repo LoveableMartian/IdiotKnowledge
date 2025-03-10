@@ -7,7 +7,7 @@ const PlayerScoreSchema = new Schema({
         required: [true, 'please write down a player name']
     },
     score: {
-        type: Number,
+        type: String,
         required: [true]
     }
 })

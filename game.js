@@ -1,28 +1,46 @@
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const questionCounterText = document.getElementById('questionCounter');
 const scoreText = document.getElementById('score');
-const mongosh = require('mongosh');
-
 
 
 let currentQuestion = {};
 let acceptingAnswers = false;
+//score is the display of the player's current score
 let score = 0;
-/*score is the display of the player's current score.*/
+//questioncounter lets you keep track on what question you're on. Intended maximum is 4.
 let questionCounter = 0;
-/*questioncounter lets you keep track on what question you're on. Intended maximum is 4.*/
+
 let availableQuestions = [];
 let questions = [];
 
-//Questions are fetched from a json file where it's written out as a ready array.
-db.getCollection("gamequestions").then(function(data){
-    return data.json();
+//Questions are fetched from the questions.json file.
+fetch("questions.json")
+.then(res => {
+    return res.json();
 })
+/* The questions are then mapped to match the required format for the code.
+This is a step after having written the code for how the data needed to be formatted to be used.*/
 .then(loadedQuestions => {
-    questions = loadedQuestions;
-    startGame();
-});
+    questions = loadedQuestions.map( loadedQuestions => {
+        const formattedQuestion = {
+            question: loadedQuestions.question
+        };
+        const answerChoices = [...loadedQuestions.incorrect_answers];
+        formattedQuestion.answer = Math.floor(Math.random() * 3) + 1;
+        answerChoices.splice(formattedQuestion.answer - 1, 0, loadedQuestions.correct_answer);
 
+        answerChoices.forEach((choice, index) => {
+            formattedQuestion["choice" + (index + 1)] = choice;
+        });
+
+        return formattedQuestion;
+})
+
+    startGame();
+})
+.catch(err => {
+    console.error(err);
+});
 
 //CONSTANTS
 const CORRECT_BONUS = 10;
