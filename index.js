@@ -1,18 +1,25 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
 const { MongoClient } = require('mongodb');
 const fs = require('fs');
+const router = express.Router();
+const cors = require('cors');
+
+
+const mongoose = require('mongoose');
 
 // set up express app
 const app = express();
+const port = 3000;
+
+app.use(express.json());
+app.use(cors());
+app.use(bodyParser.json());
+
 
 // connect to MongoDB
-mongoose.connect("mongodb://localhost/idiotknowledge2");
-mongoose.Promise = global.Promise;
-
-const uri = 'mongodb+srv://kurterikhedqvist:1Ys0CS6xApJjbAI5@kurterikcluster.sj4u9.mongodb.net/'; // Replace with your MongoDB connection string
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+const uri = 'mongodb+srv://kurterikhedqvist:1Ys0CS6xApJjbAI5@kurterikcluster.sj4u9.mongodb.net/';
+const client = new MongoClient('mongodb+srv://kurterikhedqvist:1Ys0CS6xApJjbAI5@kurterikcluster.sj4u9.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Fetches both questions and player scores from the database and saves them to separate JSON files
 async function fetchAndSaveData() {
@@ -53,8 +60,24 @@ app.use(function(err, req, res, next){
     res.status(422).send({error: err.message});
 });
 
+app.post('/saveScore', async (req, res) => {
+  const score = req.body;
+
+  try {
+      await client.connect();
+      const database = client.db('IdiotKnowledge');
+      const collection = database.collection('playerScore');
+
+      await collection.insertOne(score);
+      res.status(200).send('Score has been saved to the database');
+  } catch (error) {
+      res.status(500).send('Error saving score to the database');
+  } finally {
+      await client.close();
+  }
+});
 // listen for requests
-app.listen(4000,function(){
-    console.log('listening for requests');
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
 

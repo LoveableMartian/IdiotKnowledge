@@ -7,12 +7,12 @@ const PlayerScoreSchema = new Schema({
         required: [true, 'please write down a player name']
     },
     score: {
-        type: String,
+        type: Number,
         required: [true]
     }
 })
 
 // Model
-const GameScore = mongoose.model('playerScore', PlayerScoreSchema);
+const GameScore = mongoose.model('playerscore', PlayerScoreSchema);
 
 module.exports = GameScore;

@@ -14,7 +14,7 @@ let availableQuestions = [];
 let questions = [];
 
 //Questions are fetched from the questions.json file.
-fetch("questions.json")
+fetch("./questions.json")
 .then(res => {
     return res.json();
 })
