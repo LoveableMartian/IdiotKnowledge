@@ -15,7 +15,7 @@ Next step will be to open up Visual Studio Code, and download the Live Server ex
 
 Open up the index html file, and hit "Go Live" in the lower right corner of the VSC window.
 
-The game will then open up in your browser, and you should be ready to play the game.
+The game will then open up in your browser, and you should be ready to play the game. Alternatively, you can type in the localhost port that'll be shown on that button.
 
 If the Command Prompt states that you need specific packages, you can find them listed under Package.json
 
