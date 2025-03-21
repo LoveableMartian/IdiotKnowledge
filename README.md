@@ -8,16 +8,19 @@ At current stage, I've been using the Command Prompt together with Visual Studio
 
 When you've unzipped the project file, open up Command Prompt and change the directory to the path up to IdiotKnowledge.
 Then, enter the command "node index".
-This will simulate the server needed for the game. THe player score and questions will then be fetched.
+This will simulate the server needed to prepare the game; the player score and questions will be fetched and stored.
 Keep the server running while you play the game!
 
-Next step will be to open up Visual Studio Code, and download the Live Server extension.
+Next step will be to open up Visual Studio Code, and download the Live Server extension. Note that the author of it is Ritwick Dey!
+https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
 
-Open up the index html file, and hit "Go Live" in the lower right corner of the VSC window.
+Open up the index html file in the explorer, and hit "Go Live" in the lower right corner of the VSC window.
 
 The game will then open up in your browser, and you should be ready to play the game. Alternatively, you can type in the localhost port that'll be shown on that button.
 
-If the Command Prompt states that you need specific packages, you can find them listed under Package.json
+If the Command Prompt states that you need specific packages, you can find them listed under package.json
 
 NOTE:
 At current time, in order to see your saved player score, you're gonna need to hit ctrl+c in the command prompt and re-enter "node index" to fetch the updated player score list.
+
+If you play the game while the command prompt server isn't running, then your player score will not be saved, as it's pushed directly to the playerscore json file, which in turn is fetched once every time the server is booted up. This will eventually be polished.
