@@ -49,33 +49,5 @@ saveHighScore = (e) => {
         }
     }
     ScoreUpload().catch(console.error);
-
-    // In order to update the local leaderboard, the fetchAndSaveData function is called immediately afterwards.
-async function fetchNewScores() {
-    try {
-      await client.connect();
-      const database = client.db('IdiotKnowledge');
-      const collection = database.collection('playerScore');
-  
-      const playerScores = await collection.find().toArray();
-  
-      fs.writeFile('playerScore.json', JSON.stringify(playerScores, null, 2), (err) => {
-        if (err) throw err;
-        console.log('Data has been written to playerScore.json');
-      });
-
-      const collection2 = database.collection('gamequestions');
-  
-      const gameQuestionsFormat = await collection2.find().toArray();
-  
-      fs.writeFile('questions.json', JSON.stringify(gameQuestionsFormat, null, 2), (err) => {
-        if (err) throw err;
-        console.log('Data has been written to questions.json');
-      });
-    } finally {
-      await client.close();
-    }
-  }
-fetchNewScores().catch(console.error);
-
 }
+

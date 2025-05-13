@@ -1,0 +1,212 @@
+[
+  {
+    "_id": "67cc892a84c4e9f93dc38a6d",
+    "question": "When did we start using Schampoo for the first time?",
+    "correct_answer": "The 1930s",
+    "incorrect_answers": [
+      "The 1760s",
+      "The 1880s",
+      "2800 BC"
+    ]
+  },
+  {
+    "_id": "67cc894d84c4e9f93dc38a6e",
+    "question": "How many people in the world share the same birth day as you?",
+    "incorrect_answers": [
+      "Around 8 Thousand",
+      "No one",
+      "Around 50 Million"
+    ],
+    "correct_answer": "Around 19 Million"
+  },
+  {
+    "_id": "67cc895d84c4e9f93dc38a6f",
+    "question": "What book, published 1966, has been printed in roughly as many editions as the bible throughout the ages?",
+    "incorrect_answers": [
+      "The Magic Finger, by Roald Dahl",
+      "Tai Pan, by James Clavell",
+      "Heroes, Gods and Monsters of the Greek Myths, by Bernard Evslin"
+    ],
+    "correct_answer": "Quotations from Chairman Mao Zedong, by Mao Zedong"
+  },
+  {
+    "_id": "67cc896b84c4e9f93dc38a70",
+    "question": "In which country are the most people executed each year?",
+    "incorrect_answers": [
+      "The United States of America",
+      "Arabia",
+      "Russia"
+    ],
+    "correct_answer": "China"
+  },
+  {
+    "_id": "67cc897484c4e9f93dc38a71",
+    "question": "At what time of day do most elderly people die?",
+    "incorrect_answers": [
+      "In the afternoon",
+      "In the evening",
+      "At night"
+    ],
+    "correct_answer": "In the morning"
+  },
+  {
+    "_id": "67cc898084c4e9f93dc38a72",
+    "question": "Why are brown eggs more expensive than white eggs?",
+    "incorrect_answers": [
+      "Brown hens are rarer and therefore more expensive than white hens",
+      "There is no difference between brown and white eggs",
+      "Brown eggs are more durable than white eggs"
+    ],
+    "correct_answer": "Hens nesting brown eggs are bigger and more expensive to raise"
+  },
+  {
+    "_id": "67cc899384c4e9f93dc38a73",
+    "question": "Roughly what percentage of all books published are loss-making ventures?",
+    "incorrect_answers": [
+      "Around 100%",
+      "Around 54%",
+      "Around 25%"
+    ],
+    "correct_answer": "Around 80%"
+  },
+  {
+    "_id": "67cc899e84c4e9f93dc38a74",
+    "question": "Would you be able to surgically replace your eyes and be able to use them?",
+    "incorrect_answers": [
+      "Yes, but there would be risks of your brain become aware of the new eyes",
+      "No, the connection can't be manually recreated",
+      "No, because eyes are uniquely wired from person to person"
+    ],
+    "correct_answer": "Yes, there would be little to no risk"
+  },
+  {
+    "_id": "67cc89a784c4e9f93dc38a75",
+    "question": "A lot of people recognize the smell of leather. But what exactly is the source of that smell?",
+    "incorrect_answers": [
+      "The cowhide",
+      "Smoke from the tanning process",
+      "Oil used to soften the leather"
+    ],
+    "correct_answer": "Materials used in the bleaching process"
+  },
+  {
+    "_id": "67cc89b484c4e9f93dc38a76",
+    "question": "An american police officer will say “You have the right to remain silent. Anything you say can and will be used against you in a court of law” when arresting somebody. What does a Swedish police officer say in the same situation?",
+    "correct_answer": "They say nothing",
+    "incorrect_answers": [
+      "“Nu åker du in i häktet”",
+      "They laugh at you",
+      "The swedish equivalent of the same phrase"
+    ]
+  },
+  {
+    "_id": "67cc89c384c4e9f93dc38a77",
+    "question": "Why do snakes shed their skin?",
+    "incorrect_answers": [
+      "Because the skin stiffens and becomes harder to move around in",
+      "Because they need to repair",
+      "Because the skin is a nutricious snack to distract other predators"
+    ],
+    "correct_answer": "Because they grow, but the skin doesn't"
+  },
+  {
+    "_id": "67cc89ca84c4e9f93dc38a78",
+    "question": "In how many Km/h does the world's fastest elevator travel in?",
+    "incorrect_answers": [
+      "Around 40 Km/h",
+      "Around 88 Km/h",
+      "Around 100 Km/h"
+    ],
+    "correct_answer": "Around 60 Km/h"
+  },
+  {
+    "_id": "67cc89d184c4e9f93dc38a79",
+    "question": "Can an astronaut call home to Earth with a cellphone while in outer space?",
+    "incorrect_answers": [
+      "Yes, with the right provider",
+      "Yes, but only with a satellite phone",
+      "Yes, but with constant breaking audio breakup"
+    ],
+    "correct_answer": "No, there'd be too much interference"
+  },
+  {
+    "_id": "67cc89da84c4e9f93dc38a7a",
+    "question": "On which weekday are most bank robberies commited?",
+    "incorrect_answers": [
+      "Monday",
+      "Saturday",
+      "Wednesday"
+    ],
+    "correct_answer": "Friday"
+  },
+  {
+    "_id": "67cc89e284c4e9f93dc38a7b",
+    "question": "How long does it take to record 5 minutes of action for a feature film?",
+    "incorrect_answers": [
+      "5 minutes",
+      "10 minutes",
+      "1 Hour"
+    ],
+    "correct_answer": "A day"
+  },
+  {
+    "_id": "67cc8a0484c4e9f93dc38a7c",
+    "question": "How many of the almost 7 billion people on Earth have never seen snow?",
+    "incorrect_answers": [
+      "Roughly 6 Billion",
+      "Roughly 2 Billion",
+      "Roughly 1 Billion"
+    ],
+    "correct_answer": "Roughly 4 Billion"
+  },
+  {
+    "_id": "67cc8a0b84c4e9f93dc38a7d",
+    "question": "What food can you store for several hundred years without it going bad?",
+    "incorrect_answers": [
+      "Bread",
+      "Grapes",
+      "Jelly"
+    ],
+    "correct_answer": "Honey"
+  },
+  {
+    "_id": "67cc8a1a84c4e9f93dc38a7e",
+    "question": "How old is the oldest known pornographic film?",
+    "incorrect_answers": [
+      "From around 1800s",
+      "From around 1950s",
+      "From around 1850s"
+    ],
+    "correct_answer": "From around 1900s"
+  },
+  {
+    "_id": "67cc8a2484c4e9f93dc38a7f",
+    "question": "According to research, how much time of their lives do men spend in total spying on women?",
+    "incorrect_answers": [
+      "Half their life",
+      "20 Years",
+      "13 Years"
+    ],
+    "correct_answer": "1 Year"
+  },
+  {
+    "_id": "67cc8a2c84c4e9f93dc38a80",
+    "question": "Do you hear better or worse when your stomach is full?",
+    "incorrect_answers": [
+      "You hear better",
+      "There is no difference",
+      "It varies from person to person"
+    ],
+    "correct_answer": "You hear worse"
+  },
+  {
+    "_id": "67cc8a3784c4e9f93dc38a81",
+    "question": "Police officers will often say “We've got a 10-71” in American movies. What does this code mean?",
+    "incorrect_answers": [
+      "A Murder",
+      "A Bomb threat",
+      "Nothing"
+    ],
+    "correct_answer": "A Shooting"
+  }
+]

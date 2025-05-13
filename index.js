@@ -61,23 +61,26 @@ app.use(function(err, req, res, next){
 });
 
 app.post('/saveScore', async (req, res) => {
-  const score = req.body;
+    const score = req.body;
+    try {
+        await client.connect();
+        const database = client.db('IdiotKnowledge');
+        const collection = database.collection('playerScore');
+        await collection.insertOne(score);
 
-  try {
-      await client.connect();
-      const database = client.db('IdiotKnowledge');
-      const collection = database.collection('playerScore');
+        // Call fetchAndSaveData after saving the score
+        await fetchAndSaveData();
 
-      await collection.insertOne(score);
-      res.status(200).send('Score has been saved to the database');
-  } catch (error) {
-      res.status(500).send('Error saving score to the database');
-  } finally {
-      await client.close();
-  }
+        res.status(200).send('Score has been saved to the database and playerScore.json updated');
+    } catch (error) {
+        res.status(500).send('Error saving score to the database');
+    } finally {
+        await client.close();
+    }
 });
 // listen for requests
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
+//Helper Function for fetching the updated list of scores
