@@ -22,8 +22,9 @@ saveHighScore = (e) => {
     };
     highScores.push(score);
 //Sorts the scores. If b score is higher than a score, then b goes first.
-    highScores.sort( (a,b) => b.score - a.score)
-    highScores.splice(10);
+//These two lines of codes are superfluous, having been used for local storage filing.
+//    highScores.sort( (a,b) => b.score - a.score)
+//    highScores.splice(10);
 
     localStorage.setItem('highScores', JSON.stringify(highScores));
     window.location.assign("index.html");
